@@ -1,0 +1,14 @@
+---
+
+- name: Update the repository cache and update package "nginx" to latest version using default release squeeze-backport
+  ansible.builtin.apt:
+    name: nginx
+    state: latest
+    default_release: squeeze-backports
+    update_cache: yes
+
+- name: Install the version '1.18.0' of package "nginx" and allow potential downgrades
+  ansible.builtin.apt:
+    name: nginx=1.18.0
+    state: present
+    allow_downgrade: yes

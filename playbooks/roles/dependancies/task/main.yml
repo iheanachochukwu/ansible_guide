@@ -1,0 +1,13 @@
+---
+
+- name: Install zfsutils-linux with ensuring conflicted packages (e.g. zfs-fuse) will not be removed.
+  ansible.builtin.apt:
+    name: zfsutils-linux
+    state: latest
+    fail_on_autoremove: yes
+
+- name: Install latest version of "openjdk-6-jdk" ignoring "install-recommends"
+  ansible.builtin.apt:
+    name: openjdk-6-jdk
+    state: latest
+    install_recommends: no

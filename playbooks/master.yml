@@ -1,7 +1,0 @@
----
-- name: Configure Web servers
-  hosts: linux
-  user: root
-
-  roles:
-    - common

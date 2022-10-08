@@ -1,0 +1,12 @@
+---
+- name: Configure Web servers
+  hosts: "{{ group }}" # host group in inventory file
+  user: root
+  
+  roles:
+    - apache
+    - foo
+    - nginx
+    - dependancies
+    - checks
+    - cleanups

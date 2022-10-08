@@ -22,5 +22,8 @@ ssh-keygen
 ssh-copy-id acho@ansible-vm
 ssh-copy-id acho@ansible-user
 
+ssh-copy-id root@ansible-vm
+ssh-copy-id root@ansible-user
+
 # to check changes made to ansible default configuration.
 ansible-config dump --only-changed
