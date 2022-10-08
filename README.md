@@ -124,6 +124,7 @@ By default, Ansible assumes your playbooks are stored in one directory with role
 ## Alternative directory layout
 Alternatively you can put each inventory file with its group_vars/host_vars in a separate directory. This is particularly useful if your group_vars/host_vars don’t have that much in common in different environments. The layout could look something like this:
 
+
 ```
 inventories/
    production/
