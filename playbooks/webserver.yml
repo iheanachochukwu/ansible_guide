@@ -4,6 +4,7 @@
   user: root
   
   roles:
+    - file
     - apache
     - foo
     - nginx
