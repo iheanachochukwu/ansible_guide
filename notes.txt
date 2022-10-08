@@ -1,0 +1,26 @@
+Ansible.builtin: exit
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ini_inventory.html#ansible-collections-ansible-builtin-ini-inventory
+
+default host - etc/ansible/hosts
+default config file - /etc/ansible/ansible.cfg
+ansible-inventory --list -y
+
+# Testing Connection
+ansible all -m ping -u root
+-u is for user and where no specified
+You can use the -u argument to specify the remote system user. When not provided, Ansible will try to connect as your current system user on the control node
+
+-m is for builtin ansible module, this case is ping.
+# Running Ad-Hoc Commands
+ansible all -a "<command>" -u root
+
+# Setting up for remote control using ssh key
+The public-key authentication method requires you to copy your public SSH key to the server's ~/.ssh/authorized_keys file.
+
+# Generate ssh key pair and move public pair to remote machine
+ssh-keygen
+ssh-copy-id acho@ansible-vm
+ssh-copy-id acho@ansible-user
+
+# to check changes made to ansible default configuration.
+ansible-config dump --only-changed

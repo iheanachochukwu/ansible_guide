@@ -1,0 +1,6 @@
+---
+
+- name: Ensure apache is at the latest version
+  ansible.builtin.apt:
+    name: httpd
+    state: latest
